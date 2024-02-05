@@ -228,6 +228,12 @@ exports.update = function (req, res, next) {
   });
 };
 
+exports.foo = function (req, res, next) {
+  Todo.findById(req.params.foo, function (err, todo) {
+      console.log(foo);
+  });
+};
+
 // ** express turns the cookie key to lowercase **
 exports.current_user = function (req, res, next) {
 
